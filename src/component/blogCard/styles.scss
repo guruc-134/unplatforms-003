@@ -27,7 +27,7 @@
     width: 50%;
     padding: 1em;
     margin: 1em auto;
-    border: 7px  solid rgba(90, 88, 88, 0.443);
+    border: 5px  solid rgba(108, 104, 104, 0.443);
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
     &_inner{
         padding: 1.6em;
@@ -38,8 +38,9 @@
     padding: 1em;
     display: flex;
     margin: auto;
-    justify-content: center;
-    text-align: center;
+    text-align: left;
+    margin-left: 30px;
+    padding-bottom: 0px;
     &_btn{
         padding: 0.4em;
         padding-top: 0;
@@ -47,6 +48,7 @@
 }
 .card_footer_values{
     padding-top: 1em;
+    text-align: left;
     color: gray;
     span{
         padding: 0.5em;
