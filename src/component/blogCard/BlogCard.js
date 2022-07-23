@@ -66,7 +66,7 @@ function BlogCard({blog}) {
         fetchComments()
         increaseViewCount()
         getLikes()
-    },[])
+    })
   return (
     <Paper className='BlogCard'>
     <Grid className='BlogCard_inner'>
