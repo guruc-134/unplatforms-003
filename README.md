@@ -9,6 +9,15 @@
 
 View the site functioning here: https://unplatforms-assignment.netlify.app/
 
+
+### To run it in your local system follow the steps:
+* clone this repo
+* enter the repo and press the command `npm install`, it will install all the node modules which are required for the projects
+* then run the command `npm run start`
+
+
+## Additional Information
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
