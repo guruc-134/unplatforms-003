@@ -9,7 +9,7 @@ function Login() {
     const google_provider = new firebase.auth.GoogleAuthProvider()
     firebase.auth().signInWithPopup(google_provider)
     .then(user=>{
-        console.log(user)
+        // console.log(user)
     })
     .catch(err=>{
         console.log(err)

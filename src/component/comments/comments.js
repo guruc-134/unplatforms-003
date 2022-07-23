@@ -2,7 +2,6 @@ import React , {useState} from 'react';
 import { Grid } from '@mui/material';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import InputBase from '@mui/material/InputBase';
 import Divider from '@mui/material/Divider';
@@ -54,7 +53,6 @@ function Comments({comments, commentOnPost}) {
       <Divider/>
           <Grid>
             {comments.map(item=>{
-              console.log(item)
               return (
                 item.text.length>0&&
                 <Grid className='comment_content'>

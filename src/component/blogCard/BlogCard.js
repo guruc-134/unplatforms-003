@@ -6,7 +6,6 @@ import {UserContext} from "../../Redux/context/user/userContext"
 import Avatar from '@mui/material/Avatar';
 import ReactDOM  from 'react-dom';
 import './styles.scss'
-import Typography from '@mui/material/Typography';
 import profile from  "../../assets/profile2.jpg"
 import Comments from '../comments/comments';
 import Paper from '@mui/material/Paper';

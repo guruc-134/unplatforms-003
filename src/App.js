@@ -1,14 +1,12 @@
 import './App.css';
-import React, { useState, useMemo,useEffect } from "react";
+import React, { useState, useMemo} from "react";
 import Grid from '@mui/material/Grid';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from './pages/Home/Home';
 import Login from './pages/Login/Login';
 import {firebase} from './DataBase/firebase.config';
 import {UserContext} from './Redux/context/user/userContext'
-import unplatformsLogo from './assets/UnPlatformsLogo.png'
 function App() {
-  console.log("app reloading")
   const [isUserSignedIn, setIsUserSignedIn] = useState(true);
   const [userProfile, setUserProfile] = useState({});
   const providerValue = useMemo(() => userProfile, [userProfile]);

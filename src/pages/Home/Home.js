@@ -36,7 +36,7 @@ function Home() {
         <Grid container className='cards-container'>
             {blogs.map(blog=>{
                 return (
-                <BlogCard blog={blog} id={blog.id} commentsCount={blog.commentsCount}/>
+                <BlogCard blog={blog} id={blog.id} key={blog.id} commentsCount={blog.commentsCount}/>
                 )
                 })}
         </Grid>
