@@ -2,6 +2,21 @@
 ![image](https://user-images.githubusercontent.com/70446767/180618027-6cea59ff-5bdd-419d-8040-ad307ab7b4e6.png)
 ![image](https://user-images.githubusercontent.com/70446767/180618036-4e923f0a-4ebd-465d-96c0-6cd19804e2f3.png)
 
+## Features:
+* Like the blogs, each user can only like once, once a person likes the blog , like button will become blue color
+* Comment on blogs, names of the person who comments will also be visible
+* View for the blog will be increased, everytime the page is refreshed
+
+View the site functioning here: https://unplatforms-assignment.netlify.app/
+
+
+### To run it in your local system follow the steps:
+* clone this repo
+* enter the repo and press the command `npm install`, it will install all the node modules which are required for the projects
+* then run the command `npm run start`
+
+
+## Additional Information
 
 # Getting Started with Create React App
 
