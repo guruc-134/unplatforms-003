@@ -8,7 +8,11 @@
 * View for the blog will be increased, everytime the page is refreshed
 
 View the site functioning here: https://unplatforms-assignment.netlify.app/
-
+## Some implementational details
+* used react hooks, and use context for global statemanagement
+* used firebase-firestore as a database
+* Comments and likes are stored as collections
+* Used Google-signin for authenticating the user into the application so that likes and comments and views can be tracked
 
 ### To run it in your local system follow the steps:
 * clone this repo
