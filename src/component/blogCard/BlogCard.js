@@ -17,18 +17,21 @@ function BlogCard({blog}) {
     const user = useContext(UserContext)
     const openModal = ()=>{
     }
-    const getLikes = () =>{
+    const getLikes = ()=>{
+    // useCallback(() =>{
         firestore.collection(`blogs/${blog.id}/likes`).get()
         .then(resp=>{
             var ss = new Set()  
             resp.docs.map(item=> ss.add(item.data().id))
             ReactDOM.unstable_batchedUpdates(() => {
                 setDidLike(ss.has(user.email))
-                setLikes(ss.size    )
+                setLikes(ss.size)
              })
         })
-    }   
-    const addLike =() =>{
+    }
+    // },[ ])
+    const addLike = ()=>{
+    // useCallback(() =>{
         var ss = new Set()
         firestore.collection(`blogs/${blog.id}/likes`).get()
         .then(resp=>{
@@ -41,8 +44,8 @@ function BlogCard({blog}) {
                 getLikes()  
             }
         }
-        )
-    }
+        )}
+    // },[])
     const fetchComments = ()=>{ 
         const arr = []
         firestore.collection(`/blogs/${blog.id}/comments`).get()
@@ -57,16 +60,17 @@ function BlogCard({blog}) {
         setComments(prev=>[...prev,{...item,id:user.uid,name:user.displayName}])
         firestore.collection(`/blogs/${blog.id}/comments`).add({...item,id:user.uid,name:user.displayName})
     }
-    const increaseViewCount = ()=>{
-        const curViews = blog.views ? blog.views + 1:1
-        setViews(views=>views+1)
-        firestore.doc(`/blogs/${blog.id}`).update({...blog,views:curViews})
-    }
+
     useEffect(()=>{
         fetchComments()
-        increaseViewCount()
         getLikes()
-    })
+        const increaseViewCount = ()=>{
+            const curViews = blog.views ? blog.views + 1:1
+            setViews(views=>views+1)
+            firestore.doc(`/blogs/${blog.id}`).update({...blog,views:curViews})
+        }
+        increaseViewCount()
+    },[]) // eslint-disable-line react-hooks/exhaustive-deps
   return (
     <Paper className='BlogCard'>
     <Grid className='BlogCard_inner'>
