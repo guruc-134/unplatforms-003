@@ -16,7 +16,7 @@ function Home() {
       firestore.collection('/blogs').get()
       .then(resp=>{
         const arr = []
-        resp.docs.map(item=>
+        resp.docs.forEach(item=>
           {
             arr.push({...item.data(),id:item.id})
           })
@@ -36,7 +36,7 @@ function Home() {
         <Grid container className='cards-container'>
             {blogs.map(blog=>{
                 return (
-                <BlogCard blog={blog} id={blog.id} key={blog.id} commentsCount={blog.commentsCount}/>
+                <BlogCard blog={blog} id={blog.id} key={blog.id } commentsCount={blog.commentsCount}/>
                 )
                 })}
         </Grid>
