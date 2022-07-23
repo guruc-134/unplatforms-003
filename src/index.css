@@ -5,8 +5,17 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #5450ca49;
+  
 }
-
+.application_heading{
+  text-align: center;
+  font-size: 2.4rem;
+  color: #5450cad4;
+  margin: auto;
+  margin-top: -20px;
+  margin-bottom: 30px;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
