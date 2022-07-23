@@ -17,7 +17,9 @@ function Login() {
 }
   return (
     <Grid className='loginPage' >
-      <Welcome style={{margin:"auto"}} />
+      <Grid >
+        <Welcome className="welcome"/>
+      </Grid>
       <Grid className="loginButtonContainer">
         <button type="button"  className="login-with-google-btn" onClick = {SiginiWithFirebase}>
           Sign in with Google

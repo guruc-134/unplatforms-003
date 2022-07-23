@@ -56,7 +56,24 @@
       cursor: not-allowed;
     }
   }
-  body {
-    text-align: center;
-    padding-top: 2rem;
-  }
+    @media screen and (max-width: 480px) {
+      .loginPage{
+          width:100%;
+          flex-wrap: wrap;
+          display: flex;
+          margin-top: -10px;
+        transform: scale(0.8);
+          flex-direction: row;
+      }
+      .welcome{
+        width: 350px;
+        margin: auto;
+        margin-left: 10px;
+      }
+      .loginButtonContainer{
+        width: 100%;
+        margin-top:-30%;
+        margin-left: 25%;
+    }
+    
+    }
